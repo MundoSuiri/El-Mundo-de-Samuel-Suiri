@@ -69,6 +69,7 @@ export async function getAllPosts(): Promise<Post[]> {
     return posts;
   } catch (error) {
     console.error('Error fetching posts:', error);
+    // Return empty array - Netlify will handle this gracefully
     return [];
   }
 }
